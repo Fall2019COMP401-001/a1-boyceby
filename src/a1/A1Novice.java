@@ -18,16 +18,16 @@ public class A1Novice {
 			int numberOfItemsBought = scan.nextInt();
 			
 			// Nested for loop for each type of item bought by given customer.
-			double totalCostOfItemsBought = 0;
-			for (int n = 0; n < numberOfItemsBought; i++) {
+			double totalCostOfItemsBought = 0.00;
+			for (int n = 0; n < numberOfItemsBought; n++) {
 				int integerQuantityofItem = scan.nextInt();
 				String nameOfItem = scan.next();
 				double priceOfTheItem = scan.nextDouble();
-				totalCostOfItemsBought = totalCostOfItemsBought + priceOfTheItem;
+				// Calculation of total amount spent by given customer.
+				totalCostOfItemsBought = totalCostOfItemsBought + (priceOfTheItem * integerQuantityofItem);
 			}
 			// Print results for each given customer.
-			System.out.println(firstName.charAt(0) + ". " + lastName + ": " + totalCostOfItemsBought);
+			System.out.println(firstName.charAt(0) + ". " + lastName + ": " + String.format("%.2f", totalCostOfItemsBought));
 		}
-	
 	}
 }
